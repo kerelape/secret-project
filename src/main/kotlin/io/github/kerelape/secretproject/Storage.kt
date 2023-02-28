@@ -4,14 +4,14 @@ import java.io.File
 
 /**
  * Storage of files.
- * 
+ *
  * @since 0.0.1
  */
 interface Storage {
 
     /**
-     * Retreive all available files.
-     * 
+     * Get all available files.
+     *
      * @return All files in the storage.
      */
     suspend fun files(): Iterable<File>
