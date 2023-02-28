@@ -20,7 +20,7 @@
     "client": [
       {
         "adapter": "kotlin",
-        "value": "io.github.kerelape.secret_project.SecretProject"
+        "value": "io.github.kerelape.secretproject.SecretProject"
       }
     ]
   },
