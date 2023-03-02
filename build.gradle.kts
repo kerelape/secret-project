@@ -27,6 +27,10 @@ dependencies {
 
     val fabricKotlinVersion = project.extra["fabric_language_kotlin_version"] as String
     modImplementation("net.fabricmc", "fabric-language-kotlin", fabricKotlinVersion)
+
+    modImplementation("org.eclipse.jgit", "org.eclipse.jgit", "3.5.0.201409260305-r")
+
+    modImplementation("org.jetbrains.kotlinx", "kotlinx-coroutines-core", "1.6.4")
 }
 
 tasks {
@@ -60,15 +64,15 @@ tasks {
                     "fabric_api" to project.extra["fabric_version"] as String,
                     "fabric_language_kotlin" to project.extra["fabric_language_kotlin_version"] as String,
                     "minecraft" to project.extra["minecraft_version"] as String,
-                    "java" to project.extra["java_version"] as String
-                )
+                    "java" to project.extra["java_version"] as String,
+                ),
             )
         }
         filesMatching("*.mixins.json") {
             expand(
                 mutableMapOf(
-                    "java" to project.extra["java_version"] as String
-                )
+                    "java" to project.extra["java_version"] as String,
+                ),
             )
         }
     }
