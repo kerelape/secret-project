@@ -8,6 +8,13 @@ import java.io.FilenameFilter
 import java.nio.file.Files
 import java.util.*
 
+/**
+ * GitStorage.
+ *
+ * Storage that makes use of git VCS.
+ *
+ * @since 0.0.1
+ */
 class GitStorage(private val repository: Git, private val filter: FilenameFilter) : Storage {
 
     override suspend fun files(): Iterable<File> = withContext(Dispatchers.IO) {
