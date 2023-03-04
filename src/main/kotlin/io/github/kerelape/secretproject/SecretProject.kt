@@ -11,7 +11,6 @@ import org.lwjgl.glfw.GLFW
  *
  * @since 0.0.1
  */
-@Suppress("UNUSED")
 object SecretProject : ClientModInitializer {
     /**
      * Translation Key for open menu keybinding.
